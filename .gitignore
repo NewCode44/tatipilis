@@ -1,0 +1,7 @@
+# Archivos que no se suben a GitHub
+audio/
+*.mp3
+*.mp4
+*.pdf
+docs/
+respaldo*

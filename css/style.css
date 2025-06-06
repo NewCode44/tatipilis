@@ -1,0 +1,1169 @@
+/*
+   Los Tatipilis - Estilos Principales
+   Archivo: style.css
+*/
+
+/* ===== RESET Y ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 10px = 1rem para facilitar cálculos */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Comic Neue', cursive, sans-serif;
+    font-size: 1.6rem; /* Equivalente a 16px */
+    color: #66380F; /* Marrón oscuro para texto principal */
+    background: linear-gradient(to bottom, #FFE6B3, #8FC56F); /* Fondo principal del sitio */
+    overflow-x: hidden; /* Evita scroll horizontal no deseado */
+    line-height: 1.6; /* Espaciado de línea mejorado */
+    padding-top: 0; /* Eliminado padding-top, el header ya no es fijo por defecto o su altura se maneja diferente */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Evita espacio extra debajo de las imágenes */
+}
+
+a {
+    text-decoration: none;
+    color: #66380F; /* Color de enlaces por defecto */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+ul {
+    list-style: none; /* Sin viñetas en las listas */
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.main-container {
+    width: 100%;
+    overflow: hidden; /* Contiene elementos flotantes y evita scroll */
+    position: relative;
+}
+
+/* ===== PRELOADER ===== */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFE6B3; /* Color de fondo del preloader */
+    z-index: 9999; /* Encima de todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para alinear el texto debajo del logo */
+}
+
+#preloader .logo-container { /* Ajustado para el preloader */
+    text-align: center;
+}
+
+#logo-animation { /* Contenedor para la animación Lottie del logo */
+    width: 200px; /* Ajusta según el tamaño de tu animación */
+    height: 200px; /* Ajusta según el tamaño de tu animación */
+    margin: 0 auto 2rem; /* Espacio debajo del logo */
+}
+
+#preloader p, #preloader .loading-text { /* Estilo para el texto del preloader */
+    margin-top: 1rem; /* Reducido margen superior */
+    font-size: 2rem;
+    color: #66380F;
+    letter-spacing: 1px;
+}
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+header {
+    /* position: fixed; Ya no es fijo por defecto, se movió al inicio de la página */
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    padding: 1rem 2rem; /* Padding reducido para un header más compacto */
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, audio a la derecha */
+    align-items: center;
+    background: rgba(255, 230, 179, 0.90); /* Fondo semi-transparente */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: background 0.4s, box-shadow 0.4s;
+    /* height: 70px; Altura reducida, se adaptará al contenido */
+}
+
+/* Si se quiere un header fijo que se vuelve sólido al hacer scroll */
+header.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+header.solid {
+    background: #FFE6B3; /* Fondo sólido al hacer scroll */
+    box-shadow: 0 2px 24px rgba(102,56,15,0.13);
+}
+
+/* Logo */
+.logo {
+    width: 150px; /* Tamaño del logo ajustado */
+    min-width: 100px;
+    transition: transform 0.3s ease; /* Transición para hover */
+    display: flex; /* Para centrar la imagen si es necesario */
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Menú de navegación - Ahora en la sección de bienvenida */
+#main-nav {
+    /* Los estilos de posicionamiento se eliminan, ya que se ubicará con el flujo normal */
+    /* position: relative; */
+    /* margin-left: 3rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos del menú */
+    /* height: 100%; */ /* La altura se adaptará */
+    /* z-index: 110; */
+    background: transparent;
+    width: 100%; /* Ocupa todo el ancho disponible en su nuevo contenedor */
+    padding: 2rem 0; /* Espacio alrededor del menú */
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: center; /* Centra los troncos */
+    align-items: flex-end; /* Alinea los troncos en la parte inferior */
+    gap: 1.5rem; /* Espacio entre troncos aumentado ligeramente */
+    /* height: 100%; */
+    margin: 0;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+}
+
+/* Estilo de los troncos y los nuevos íconos */
+.nav-tronco {
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    text-align: center; /* Centra el texto debajo del tronco */
+}
+
+.nav-tronco a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #66380F; /* Color del texto del enlace */
+}
+
+.nav-tronco .menu-icon { /* Estilos para los nuevos íconos PNG */
+    width: 48px; /* Tamaño del ícono */
+    height: 48px; /* Tamaño del ícono */
+    margin-bottom: 0.5rem; /* Espacio entre el ícono y el tronco */
+    object-fit: contain; /* Asegura que el ícono se vea bien */
+    transition: transform 0.3s ease;
+}
+
+.nav-tronco .tronco-img { /* Imagen del tronco */
+    width: 70px; /* Tamaño reducido del tronco */
+    height: auto;
+    display: block; /* Asegura que no haya espacio extra */
+}
+
+.nav-tronco span { /* Texto debajo del tronco */
+    /* position: absolute; */ /* Ya no es absoluto */
+    /* bottom: 1.5rem; */
+    /* left: 0; */
+    /* right: 0; */
+    margin-top: 0.8rem; /* Espacio entre el tronco y el texto */
+    color: #66380F; /* Color del texto, más oscuro para mejor contraste */
+    font-weight: bold;
+    font-size: 1.3rem; /* Tamaño de fuente ligeramente reducido */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* Sombra más sutil */
+    opacity: 1; /* Siempre visible */
+    transition: color 0.3s ease;
+    /* transform: translateY(10px); */ /* Eliminado */
+    pointer-events: none; /* Para que el clic vaya al 'a' */
+}
+
+.nav-tronco:hover .menu-icon {
+    transform: scale(1.1);
+}
+
+.nav-tronco:hover .tronco-img {
+    transform: translateY(-8px) scale(1.03); /* Efecto hover ajustado */
+}
+.nav-tronco:hover span {
+    color: #E97451; /* Color de realce al pasar el ratón */
+}
+
+.nav-tronco.active .tronco-img {
+    transform: translateY(-12px) scale(1.05); /* Efecto activo ajustado */
+}
+.nav-tronco.active span {
+    color: #E97451; /* Color de realce para el elemento activo */
+    font-weight: 700; /* Más énfasis */
+}
+.nav-tronco.active .menu-icon {
+    filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.3)); /* Sombra para el ícono activo */
+}
+
+
+#audio-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    /* margin-left: auto; */ /* Se ajusta con space-between en header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#audio-toggle img {
+    width: 100%; /* Ajustado para llenar el contenedor */
+    height: 100%;
+}
+
+#audio-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* ===== SECCIÓN DE BIENVENIDA (PARALLAX) ===== */
+#welcome {
+    /* height: 100vh; Altura ajustada, ya no necesita ser pantalla completa */
+    min-height: 70vh; /* Altura mínima para asegurar visibilidad */
+    display: flex;
+    flex-direction: column; /* Para colocar el menú arriba del contenido de bienvenida */
+    align-items: center;
+    justify-content: center; /* Centra el contenido de bienvenida verticalmente */
+    padding-top: 2rem; /* Espacio para el menú si está aquí, o general */
+    padding-bottom: 4rem; /* Espacio inferior */
+    overflow: hidden;
+    position: relative; /* Necesario para las capas de parallax */
+}
+
+/* El menú se moverá aquí desde el header en el HTML */
+#welcome #main-nav {
+    order: -1; /* Coloca el menú antes del .welcome-content */
+    margin-bottom: 3rem; /* Espacio entre el menú y el título de bienvenida */
+    width: 100%;
+    max-width: 900px; /* Limita el ancho del menú para que no se extienda demasiado */
+    padding: 1rem 0;
+}
+
+
+.welcome-content {
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    z-index: 10; /* Encima de las capas de parallax */
+    max-width: 700px; /* Ancho máximo del contenido de bienvenida */
+    padding: 2.5rem; /* Padding reducido */
+    background: rgba(102, 56, 15, 0.75); /* Fondo semi-transparente más oscuro */
+    border-radius: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.animated-title {
+    font-size: 5rem; /* Tamaño de título reducido */
+    margin-bottom: 1.5rem; /* Margen inferior reducido */
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+.welcome-text {
+    font-size: 1.8rem; /* Tamaño de texto reducido */
+    margin-bottom: 2.5rem; /* Margen inferior reducido */
+}
+
+.btn-magic {
+    display: inline-block;
+    padding: 1.2rem 2.5rem; /* Padding reducido */
+    background: linear-gradient(45deg, #E97451, #FFA500);
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.6rem; /* Tamaño de fuente reducido */
+    border-radius: 5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #FFF;
+}
+
+.btn-magic:before { /* Efecto de brillo al pasar el ratón */
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, rgba(255,165,0,0.5), rgba(233,116,81,0.5));
+    transform: rotate(45deg) scale(0);
+    transition: all 0.5s ease;
+    z-index: -1;
+    border-radius: 5rem;
+}
+
+.btn-magic:hover {
+    transform: translateY(-5px) scale(1.03); /* Efecto hover mejorado */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.btn-magic:hover:before {
+    transform: rotate(45deg) scale(1.5);
+}
+
+/* ===== ESPACIADO GENERAL Y SECCIONES ===== */
+/* body, .main-container { */
+    /* padding-top: 90px !important; Eliminado, el header ya no es fijo por defecto */
+/* } */
+
+section {
+    padding: 6rem 2rem; /* Padding reducido para secciones */
+    position: relative;
+}
+
+.content-section {
+    max-width: 1100px; /* Ancho máximo reducido */
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+    position: relative;
+    margin-bottom: 4rem; /* Margen inferior reducido */
+}
+
+.title-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px; /* Ancho del marco reducido */
+    height: auto;
+    z-index: -1; /* Detrás del texto */
+}
+
+.section-heading h2 {
+    font-size: 3.5rem; /* Tamaño de título de sección reducido */
+    color: #66380F;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1; /* Encima del marco */
+}
+
+.section-heading.light h2 { /* Títulos en secciones oscuras */
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+
+/* ===== SECCIÓN DE INTRODUCCIÓN ===== */
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* Espacio reducido */
+    flex-wrap: wrap; /* Para mejor responsividad */
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo para el texto */
+}
+
+.intro-text p {
+    margin-bottom: 1.5rem; /* Margen reducido */
+    font-size: 1.8rem; /* Tamaño de fuente reducido */
+}
+
+.intro-image {
+    flex: 1;
+    text-align: center;
+    min-width: 300px; /* Ancho mínimo para la imagen */
+}
+
+.intro-image img { /* Estilo para la imagen de introducción */
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.animated-element { /* Para elementos que se animan al hacer scroll */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.animated-element.in-view { /* Clase que se añade con JS al ser visible */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-element:hover {
+    transform: translateY(-10px) scale(1.02); /* Efecto hover sutil */
+}
+
+/* ===== SECCIÓN DE PERSONAJES (CARRUSEL) ===== */
+.character-carousel {
+    margin: 0 auto;
+    position: relative;
+    max-width: 900px; /* Ancho máximo reducido */
+    overflow: hidden; /* Esencial para el carrusel */
+}
+
+.character-container {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transición más suave */
+}
+
+.character-card {
+    flex: 0 0 100%; /* Cada tarjeta ocupa el 100% del contenedor */
+    background: #FFE6B3;
+    border-radius: 2rem;
+    padding: 2.5rem; /* Padding reducido */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden; /* Para el efecto de gradiente */
+    gap: 2rem; /* Espacio entre imagen e info */
+    flex-wrap: wrap; /* Para responsividad */
+}
+
+.character-card:before { /* Efecto de brillo sutil */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.character-image {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    min-width: 250px; /* Ancho mínimo */
+}
+
+.character-image img {
+    max-height: 350px; /* Altura máxima reducida */
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2)); /* Sombra para destacar */
+}
+
+.character-animation { /* Para animaciones Lottie de personajes */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Detrás de la imagen principal si se superponen */
+}
+
+.character-info {
+    flex: 1.5; /* Más espacio para la información */
+    padding: 0 1rem; /* Padding ajustado */
+    min-width: 300px; /* Ancho mínimo */
+}
+
+.character-info h3 {
+    font-size: 3.5rem; /* Tamaño reducido */
+    margin-bottom: 0.5rem;
+    color: #E97451; /* Color distintivo para el nombre */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.character-info h4 { /* Para la especie del personaje */
+    font-size: 2.2rem; /* Tamaño reducido */
+    margin-bottom: 1.5rem; /* Margen reducido */
+    color: #66380F;
+    font-style: italic;
+}
+
+.character-quote {
+    font-size: 2rem; /* Tamaño reducido */
+    background: #FFF;
+    padding: 1.2rem; /* Padding reducido */
+    border-radius: 1.5rem;
+    margin-bottom: 1.5rem; /* Margen reducido */
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    font-style: italic;
+    color: #777;
+}
+
+.character-quote:before { /* Triángulo de la burbuja de diálogo */
+    content: '';
+    position: absolute;
+    width: 15px; /* Tamaño reducido */
+    height: 15px; /* Tamaño reducido */
+    background: #FFF;
+    left: 25px; /* Posición ajustada */
+    bottom: -7px; /* Posición ajustada */
+    transform: rotate(45deg);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.05);
+    z-index: -1;
+}
+
+.character-ability {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem; /* Margen reducido */
+}
+
+.character-ability img {
+    width: 35px; /* Tamaño de icono reducido */
+    height: 35px;
+}
+
+.character-ability span {
+    font-size: 1.6rem; /* Tamaño de fuente reducido */
+    font-weight: bold;
+}
+
+.character-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem; /* Espacio reducido */
+}
+
+.trait {
+    padding: 0.6rem 1.2rem; /* Padding reducido */
+    background: #FFF;
+    border-radius: 5rem;
+    font-size: 1.3rem; /* Tamaño de fuente reducido */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    color: #555;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem; /* Margen reducido */
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 0.8rem; /* Espacio reducido */
+    margin: 0 1.5rem; /* Margen reducido */
+}
+
+.dot {
+    width: 12px; /* Tamaño reducido */
+    height: 12px;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dot.active {
+    background: #E97451;
+    transform: scale(1.2);
+}
+
+.prev-btn, .next-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 35px; /* Tamaño reducido */
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+.prev-btn img, .next-btn img { /* Para asegurar que las imágenes dentro de los botones se escalen bien */
+    width: 100%;
+    height: 100%;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    transform: scale(1.1);
+}
+
+.character-cta {
+    text-align: center;
+    margin-top: 3rem; /* Margen reducido */
+}
+
+/* ===== SECCIÓN DE CATEGORÍAS ===== */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tamaño mínimo reducido */
+    gap: 2.5rem; /* Espacio reducido */
+}
+
+.category-card {
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    height: 280px; /* Altura reducida */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición más suave */
+}
+
+.category-card:hover {
+    transform: translateY(-8px) scale(1.03); /* Efecto hover sutil */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.category-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.1); /* Efecto de zoom en la imagen */
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem; /* Padding reducido */
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); /* Gradiente más oscuro */
+    color: #FFF;
+    transition: background 0.5s ease, transform 0.5s ease;
+    transform: translateY(30%); /* Inicialmente un poco oculto */
+    opacity: 0.9;
+}
+
+.category-card:hover .category-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+    transform: translateY(0); /* Se revela completamente */
+    opacity: 1;
+}
+
+.category-overlay h3 {
+    font-size: 2.2rem; /* Tamaño reducido */
+    margin-bottom: 0.8rem; /* Margen reducido */
+}
+
+.category-overlay p {
+    font-size: 1.4rem; /* Tamaño reducido */
+    margin-bottom: 1.2rem; /* Margen reducido */
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.btn-explore {
+    display: inline-block;
+    padding: 0.7rem 1.3rem; /* Padding reducido */
+    background: #FFF;
+    color: #66380F;
+    border-radius: 5rem;
+    font-weight: bold;
+    font-size: 1.3rem; /* Tamaño reducido */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-explore:hover {
+    background: #E97451;
+    color: #FFF;
+    transform: translateY(-3px) scale(1.05); /* Efecto hover mejorado */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ===== SECCIÓN DE CONSERVACIÓN ===== */
+#conservation {
+    color: #FFF;
+    position: relative;
+    background-color: #5A8B4C; /* Color de fondo si la imagen no carga o para complementar */
+}
+
+.conservation-bg { /* Fondo de la sección de conservación */
+    background: url('../img/ui/fondos/conservacion-bg.png') center/cover no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7; /* Opacidad para que el texto sea legible */
+}
+
+.conservation-content {
+    position: relative;
+    z-index: 10; /* Encima del fondo */
+    max-width: 900px; /* Ancho máximo reducido */
+    margin: 0 auto;
+    padding: 2rem; /* Añadido padding para que no pegue a los bordes */
+    background: rgba(0,0,0,0.5); /* Fondo oscuro semi-transparente para el contenido */
+    border-radius: 1.5rem;
+}
+
+.conservation-text {
+    /* background: rgba(0,0,0,0.6); Eliminado, ya está en .conservation-content */
+    /* padding: 3rem; */
+    /* border-radius: 2rem; */
+    font-size: 1.7rem; /* Tamaño reducido */
+    line-height: 1.7; /* Espaciado de línea mejorado */
+    text-align: center; /* Centrar texto */
+}
+.conservation-text p {
+    margin-bottom: 1.5rem;
+}
+
+
+.conservation-stats {
+    margin: 3rem 0; /* Margen reducido */
+    display: grid; /* Usar grid para mejor alineación */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column; /* Icono arriba, info abajo */
+    align-items: center; /* Centrar elementos */
+    gap: 1rem; /* Espacio reducido */
+    /* margin-bottom: 2rem; */
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.stat-icon {
+    width: 70px; /* Tamaño reducido */
+    height: 70px;
+    background: #FFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.stat-icon img {
+    width: 50px; /* Tamaño de imagen dentro del icono reducido */
+    height: 50px;
+}
+
+.stat-info {
+    flex: 1;
+    width: 100%; /* Ocupa todo el ancho del item */
+    text-align: center;
+}
+
+.stat-info h4 {
+    font-size: 1.8rem; /* Tamaño reducido */
+    margin-bottom: 0.8rem; /* Margen reducido */
+}
+
+.stat-bar {
+    height: 18px; /* Altura reducida */
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background: linear-gradient(to right, #E97451, #FFA500);
+    border-radius: 10px;
+    transition: width 1s ease-in-out; /* Animación para la barra */
+}
+
+.conservation-cta {
+    text-align: center;
+    margin-top: 2.5rem; /* Margen reducido */
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #66380F; /* Marrón oscuro de fondo */
+    color: #FFF;
+    padding: 4rem 2rem 1.5rem; /* Padding ajustado */
+    position: relative;
+    text-align: center; /* Centrar contenido del footer */
+}
+
+.footer-content {
+    max-width: 1100px; /* Ancho máximo reducido */
+    margin: 0 auto;
+}
+
+.footer-logo {
+    text-align: center;
+    margin-bottom: 2.5rem; /* Margen reducido */
+}
+
+.footer-logo img {
+    width: 180px; /* Ancho reducido */
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que los enlaces se ajusten en pantallas pequeñas */
+    gap: 1.5rem 2.5rem; /* Espacio entre enlaces */
+    margin-bottom: 2.5rem; /* Margen reducido */
+}
+
+.footer-nav a {
+    color: #FFF;
+    font-size: 1.5rem; /* Tamaño reducido */
+}
+
+.footer-nav a:hover {
+    color: #FFA500; /* Naranja al pasar el ratón */
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Espacio reducido */
+    margin-bottom: 2.5rem; /* Margen reducido */
+}
+
+.social-icon { /* Contenedor del icono social */
+    width: 45px; /* Tamaño reducido */
+    height: 45px;
+    background: rgba(255,255,255, 0.15); /* Fondo sutil */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.social-icon img { /* Imagen dentro del icono social */
+    width: 25px; /* Tamaño de la imagen del icono reducido */
+    height: 25px;
+}
+
+
+.social-icon:hover {
+    transform: translateY(-5px) scale(1.1); /* Efecto hover mejorado */
+    background: #FFA500; /* Naranja al pasar el ratón */
+}
+
+.footer-contact {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Margen reducido */
+}
+
+.footer-contact p {
+    font-size: 1.6rem; /* Tamaño reducido */
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact a {
+    color: #FFA500; /* Naranja para el email */
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 1.3rem; /* Tamaño reducido */
+    opacity: 0.8; /* Opacidad para que sea menos prominente */
+    padding-top: 1.5rem; /* Espacio arriba */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Línea divisora sutil */
+}
+
+.footer-decoration { /* Contenedor para las hojas decorativas del footer */
+    position: absolute;
+    bottom: 0; /* Alineado abajo */
+    left: 0;
+    width: 100%;
+    height: 80px; /* Altura de la decoración */
+    overflow: hidden;
+    pointer-events: none; /* No interfiere con clics */
+    opacity: 0.5;
+}
+
+.footer-leaf { /* Estilo de cada hoja decorativa */
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* opacity: 0.3; */ /* Opacidad ya está en el contenedor padre */
+    animation: floatLeaf 10s infinite ease-in-out alternate; /* Animación de flotación */
+}
+
+.leaf1 {
+    width: 80px; /* Tamaño reducido */
+    height: 80px;
+    background-image: url('../img/ui/hojas/hoja1.png');
+    bottom: 5px; /* Posición ajustada */
+    left: 15%;
+    animation-duration: 12s;
+}
+
+.leaf2 {
+    width: 70px; /* Tamaño reducido */
+    height: 70px;
+    background-image: url('../img/ui/hojas/hoja2.png');
+    bottom: 10px; /* Posición ajustada */
+    right: 12%;
+    animation-duration: 10s;
+    animation-delay: -2s; /* Para desfasar la animación */
+}
+
+.leaf3 {
+    width: 50px; /* Tamaño reducido */
+    height: 50px;
+    background-image: url('../img/ui/hojas/hoja3.png');
+    bottom: 0px; /* Posición ajustada */
+    left: 45%;
+    animation-duration: 15s;
+    animation-delay: -5s;
+}
+
+/* ===== PARTÍCULAS (Contenedor general) ===== */
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* No interfiere con clics */
+    z-index: 90; /* Detrás del contenido principal pero encima del fondo */
+}
+
+/* ===== EFECTOS Y ANIMACIONES (Keyframes) ===== */
+@keyframes floatLeaf { /* Animación para las hojas del footer */
+    0% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    100% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+/* ===== MOBILE MENU TOGGLE (Hamburguesa) ===== */
+.mobile-menu-toggle {
+    display: none; /* Oculto por defecto, se mostrará en responsive.css */
+    cursor: pointer;
+    z-index: 2100; /* Encima del header */
+    padding: 1rem;
+}
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #66380F;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Ajustes responsivos básicos (se complementarán en responsive.css) */
+@media screen and (max-width: 900px) {
+    header {
+        padding: 0.8rem 1.5rem; /* Padding ajustado */
+        /* height: 60px; */ /* Altura ajustada */
+    }
+    .logo {
+        width: 120px; /* Logo más pequeño */
+    }
+
+    #main-nav ul {
+        gap: 1rem; /* Menos espacio entre troncos */
+    }
+    .nav-tronco .tronco-img {
+        width: 60px; /* Troncos más pequeños */
+    }
+    .nav-tronco .menu-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .nav-tronco span {
+        font-size: 1.2rem; /* Texto más pequeño */
+    }
+    /* body, .main-container { */
+        /* padding-top: 70px !important; */ /* Ajustar si el header es fijo */
+    /* } */
+
+    .animated-title {
+        font-size: 4rem;
+    }
+    .welcome-text {
+        font-size: 1.6rem;
+    }
+    .section-heading h2 {
+        font-size: 3rem;
+    }
+    .character-info h3 {
+        font-size: 3rem;
+    }
+    .character-quote {
+        font-size: 1.8rem;
+    }
+    .category-overlay h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Punto de quiebre para menú hamburguesa */
+    .mobile-menu-toggle {
+        display: block; /* Mostrar el botón de hamburguesa */
+    }
+    #main-nav { /* Estilos para el menú desplegable */
+        position: absolute;
+        top: 100%; /* Se despliega debajo del header */
+        left: 0;
+        width: 100%;
+        background: #FFE6B3; /* Fondo para el menú desplegado */
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        max-height: 0; /* Oculto por defecto */
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    #main-nav.active { /* Cuando el menú está activo (abierto) */
+        max-height: 500px; /* Altura suficiente para mostrar todos los elementos */
+        padding: 2rem 0;
+    }
+
+    #main-nav ul {
+        flex-direction: column; /* Elementos en columna */
+        width: 100%;
+        gap: 1.5rem; /* Espacio entre elementos */
+    }
+    .nav-tronco {
+        width: 80%; /* Ancho de los elementos del menú */
+        margin: 0 auto;
+    }
+    .nav-tronco .tronco-img {
+        width: 50px;
+    }
+    .nav-tronco .menu-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 0.3rem;
+    }
+    .nav-tronco span {
+        font-size: 1.4rem; /* Texto más grande para mejor legibilidad */
+        margin-top: 0.5rem;
+    }
+    #audio-toggle {
+        margin-left: 0; /* Ajustar si es necesario */
+    }
+    /* body, .main-container { */
+        /* padding-top: 60px !important; */ /* Ajustar si el header es fijo */
+    /* } */
+    .intro-content {
+        flex-direction: column; /* Apilar texto e imagen */
+        gap: 2rem;
+    }
+    .character-card {
+        flex-direction: column; /* Apilar imagen e info del personaje */
+        padding: 2rem;
+    }
+    .character-image {
+        margin-bottom: 2rem;
+    }
+    .character-image img {
+        max-height: 300px;
+    }
+    .conservation-stats {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        width: 100px;
+    }
+    .animated-title {
+        font-size: 3.2rem;
+    }
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+    .btn-magic {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+    }
+    .section-heading h2 {
+        font-size: 2.5rem;
+    }
+    .title-frame {
+        width: 250px;
+    }
+    .intro-text p, .conservation-text {
+        font-size: 1.6rem;
+    }
+    .character-info h3 {
+        font-size: 2.5rem;
+    }
+    .character-quote {
+        font-size: 1.6rem;
+    }
+    .category-card {
+        height: 250px;
+    }
+    .category-overlay h3 {
+        font-size: 1.8rem;
+    }
+    .category-overlay p {
+        font-size: 1.3rem;
+    }
+    .btn-explore {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .footer-nav ul {
+        gap: 1rem 1.5rem;
+    }
+    .footer-nav a {
+        font-size: 1.4rem;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .social-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}

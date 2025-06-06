@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Tatipilis - El Bosque Mágico de México</title>
+
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="preloader">
+        <div class="logo-container">
+            <div id="logo-animation"></div>
+            <p>Cargando el bosque mágico...</p>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <a href="index.html"> <img src="img/logo/logo-tatipilis.png" alt="Los Tatipilis">
+                </a>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li class="nav-tronco active">
+                        <a href="index.html">
+                            <img src="img/ui/iconos/menu/inicio-icon.png" alt="Icono Inicio" class="menu-icon">
+                        <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-tronco">
+                        <a href="personajes.html">
+                            <img src="img/ui/iconos/menu/personajes-icon.png" alt="Icono Personajes" class="menu-icon">
+                        <span>Personajes</span>
+                        </a>
+                    </li>
+                    <li class="nav-tronco">
+                        <a href="refranes.html">
+                            <img src="img/ui/iconos/menu/refranes-icon.png" alt="Icono Refranes" class="menu-icon">
+                        <span>Refranes</span>
+                        </a>
+                    </li>
+                    <li class="nav-tronco">
+                        <a href="lugares.html">
+                            <img src="img/ui/iconos/menu/lugares-icon.png" alt="Icono Lugares" class="menu-icon">
+                        <span>Lugares</span>
+                        </a>
+                    </li>
+                    <li class="nav-tronco">
+                        <a href="gastronomia.html">
+                            <img src="img/ui/iconos/menu/gastronomia-icon.png" alt="Icono Gastronomía" class="menu-icon">
+                        <span>Gastronomía</span>
+                        </a>
+                    </li>
+                    <li class="nav-tronco">
+                        <a href="oficios.html">
+                            <img src="img/ui/iconos/menu/oficios-icon.png" alt="Icono Oficios" class="menu-icon">
+                        <span>Oficios</span>
+                        </a>
+                    </li>
+                    <li class="nav-tronco">
+                        <a href="tradiciones.html">
+                            <img src="img/ui/iconos/menu/tradiciones-icon.png" alt="Icono Tradiciones" class="menu-icon">
+                        <span>Tradiciones</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="audio-toggle">
+                <img src="img/ui/iconos/audio-on.png" alt="Toggle Audio">
+            </div>
+        </header>
+
+        <section id="welcome" class="parallax-section">
+            <div class="parallax-bg" data-speed="0.1"></div>
+            <div class="parallax-layer mountains" data-speed="0.3"></div>
+            <div class="parallax-layer clouds" data-speed="0.2"></div>
+            <div class="parallax-layer forest-back" data-speed="0.4"></div>
+            <div class="parallax-layer forest-mid" data-speed="0.6"></div>
+            <div class="parallax-layer forest-front" data-speed="0.8"></div>
+            <div id="flying-birds"></div>
+            <div id="falling-leaves"></div>
+            <div class="welcome-content">
+                <h1 class="animated-title">Bienvenidos al<br>Bosque Tatipili</h1>
+                <p class="welcome-text">Un lugar mágico donde los animales mexicanos en peligro de extinción cobran vida y te invitan a conocer las maravillas de México.</p>
+                <div class="cta-button">
+                    <a href="#characters" class="btn-magic">Conoce a los Tatipilis</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro" class="content-section">
+            <div class="section-heading">
+                <img src="img/ui/marcos/marco-titulo.png" alt="" class="title-frame">
+                <h2>Los Tatipilis</h2>
+            </div>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>En el corazón de México existe un bosque mágico llamado <strong>Tatipili</strong>, hogar de criaturas extraordinarias que representan la rica biodiversidad mexicana en peligro de extinción.</p>
+                    <p>Estos amigos especiales tienen la misión de enseñarnos sobre la cultura, tradiciones y maravillas de México, mientras nos recuerdan la importancia de proteger a estas especies.</p>
+                    <p>¡Acompáñanos en esta aventura mágica y descubre el colorido mundo de los Tatipilis!</p>
+                </div>
+                <div class="intro-image">
+                    <img src="img/ui/fondos/bosque-tatipili.png" alt="Bosque Tatipili" class="animated-element">
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="content-section">
+            <div class="section-heading">
+                <img src="img/ui/marcos/marco-titulo.png" alt="" class="title-frame">
+                <h2>Conoce a los Tatipilis</h2>
+            </div>
+            <div class="character-carousel">
+                <div class="character-container">
+                    <div class="character-card" id="axli">
+                        <div class="character-image">
+                            <img src="img/personajes/axli/axli-full.png" alt="Axli">
+                            <div class="character-animation" id="axli-anim"></div>
+                        </div>
+                        <div class="character-info">
+                            <h3>Axli</h3>
+                            <h4>Ajolote</h4>
+                            <div class="character-quote">"Y si lo soñamos... y luego lo hacemos?"</div>
+                            <div class="character-ability">
+                                <img src="img/ui/iconos/habilidad-magia.png" alt="">
+                                <span>Detecta cosas mágicas</span>
+                            </div>
+                            <div class="character-traits">
+                                <span class="trait">Curioso</span>
+                                <span class="trait">Soñador</span>
+                                <span class="trait">Tímido</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="character-card" id="indajani">
+                        <div class="character-image">
+                            <img src="img/personajes/indajani/indajani-full.png" alt="Indajani">
+                            <div class="character-animation" id="indajani-anim"></div>
+                        </div>
+                        <div class="character-info">
+                            <h3>Indajani</h3>
+                            <h4>Niña</h4>
+                            <div class="character-quote">"¿A qué jugamos hoy?"</div>
+                            <div class="character-ability">
+                                <img src="img/ui/iconos/habilidad-amistad.png" alt="">
+                                <span>Hace amigos de inmediato</span>
+                            </div>
+                            <div class="character-traits">
+                                <span class="trait">Alegre</span>
+                                <span class="trait">Enérgica</span>
+                                <span class="trait">Noble</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="character-card" id="kauina">
+                         <div class="character-image">
+                            <img src="img/personajes/kauina/kauina-full.png" alt="Kauina"> <div class="character-animation" id="kauina-anim"></div>
+                        </div>
+                        <div class="character-info">
+                            <h3>Kauina</h3>
+                            <h4>Guacamaya Roja</h4>
+                            <div class="character-quote">"¡A volar y cantar!"</div>
+                            <div class="character-ability">
+                                <img src="img/ui/iconos/habilidad-canto.png" alt=""> <span>Canta con fuerza</span>
+                            </div>
+                            <div class="character-traits">
+                                <span class="trait">Extrovertida</span>
+                                <span class="trait">Valiente</span>
+                                <span class="trait">Musical</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="character-card" id="kuyki">
+                        <div class="character-image">
+                            <img src="img/personajes/kuyki/kuyki-full.png" alt="Kuyki">
+                            <div class="character-animation" id="kuyki-anim"></div>
+                        </div>
+                        <div class="character-info">
+                            <h3>Kuyki</h3>
+                            <h4>Tucán Real</h4>
+                            <div class="character-quote">"¡Repite conmigo!"</div>
+                            <div class="character-ability">
+                                <img src="img/ui/iconos/habilidad-imitacion.png" alt="">
+                                <span>Imita sonidos</span>
+                            </div>
+                            <div class="character-traits">
+                                <span class="trait">Ruidoso</span>
+                                <span class="trait">Energético</span>
+                                <span class="trait">Espontáneo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="character-card" id="ocelin">
+                        <div class="character-image">
+                            <img src="img/personajes/ocelin/ocelin-full.png" alt="Ocelín">
+                            <div class="character-animation" id="ocelin-anim"></div>
+                        </div>
+                        <div class="character-info">
+                            <h3>Ocelín</h3>
+                            <h4>Jaguar</h4>
+                            <div class="character-quote">"La selva guarda secretos."</div>
+                            <div class="character-ability">
+                                <img src="img/ui/iconos/habilidad-olfato.png" alt="">
+                                <span>Huele la verdad</span>
+                            </div>
+                            <div class="character-traits">
+                                <span class="trait">Sereno</span>
+                                <span class="trait">Noble</span>
+                                <span class="trait">Sabio</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="character-card" id="tlapu">
+                        <div class="character-image">
+                            <img src="img/personajes/tlapu/tlapu-full.png" alt="Tlapu">
+                            <div class="character-animation" id="tlapu-anim"></div>
+                        </div>
+                        <div class="character-info">
+                            <h3>Tlapu</h3>
+                            <h4>Tlacuache</h4>
+                            <div class="character-quote">"¡Ups! ¿Yo hice eso?"</div>
+                            <div class="character-ability">
+                                <img src="img/ui/iconos/habilidad-caos.png" alt="">
+                                <span>Provoca desastres (útiles)</span>
+                            </div>
+                            <div class="character-traits">
+                                <span class="trait">Travieso</span>
+                                <span class="trait">Ocurrente</span>
+                                <span class="trait">Caótico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev-btn"><img src="img/ui/botones/flecha-izq.png" alt="Anterior"></button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                        <span class="dot" data-index="5"></span>
+                    </div>
+                    <button class="next-btn"><img src="img/ui/botones/flecha-der.png" alt="Siguiente"></button>
+                </div>
+            </div>
+            <div class="character-cta">
+                <a href="personajes.html" class="btn-magic">Ver todos los personajes</a>
+            </div>
+        </section>
+
+        <section id="categories" class="content-section">
+            <div class="section-heading">
+                <img src="img/ui/marcos/marco-titulo.png" alt="" class="title-frame">
+                <h2>Explora México con los Tatipilis</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" data-category="refranes">
+                    <div class="category-image">
+                        <img src="img/ui/fondos/refranes-bg.png" alt="Refranes mexicanos">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Refranes</h3>
+                        <p>Descubre la sabiduría popular mexicana a través de divertidos refranes</p>
+                        <a href="refranes.html" class="btn-explore">Explorar</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="lugares">
+                    <div class="category-image">
+                        <img src="img/ui/fondos/lugares-bg.png" alt="Lugares de México">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Lugares</h3>
+                        <p>Visita los rincones más hermosos de México con nuestros guías</p>
+                        <a href="lugares.html" class="btn-explore">Explorar</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="gastronomia">
+                    <div class="category-image">
+                        <img src="img/ui/fondos/gastronomia-bg.png" alt="Gastronomía mexicana">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Gastronomía</h3>
+                        <p>Saborea la rica gastronomía mexicana junto a los Tatipilis</p>
+                        <a href="gastronomia.html" class="btn-explore">Explorar</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="oficios">
+                    <div class="category-image">
+                        <img src="img/ui/fondos/oficios-bg.png" alt="Oficios tradicionales">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Oficios</h3>
+                        <p>Conoce los oficios tradicionales que dan vida a la cultura mexicana</p>
+                        <a href="oficios.html" class="btn-explore">Explorar</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="tradiciones">
+                    <div class="category-image">
+                        <img src="img/ui/fondos/tradiciones-bg.png" alt="Tradiciones mexicanas">
+                    </div>
+                    <div class="category-overlay">
+                        <h3>Tradiciones</h3>
+                        <p>Descubre las coloridas tradiciones y festividades de México</p>
+                        <a href="tradiciones.html" class="btn-explore">Explorar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conservation" class="content-section parallax-section">
+            <div class="parallax-bg conservation-bg" data-speed="0.1"></div>
+            <div class="conservation-content">
+                <div class="section-heading light">
+                    <img src="img/ui/marcos/marco-titulo-light.png" alt="" class="title-frame">
+                    <h2>Ayuda a protegerlos</h2>
+                </div>
+                <div class="conservation-text">
+                    <p>Los personajes de Los Tatipilis representan especies en peligro de extinción en México. Al conocerlos y aprender sobre ellos, contribuyes a crear conciencia sobre la importancia de su conservación.</p>
+                    <div class="conservation-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <img src="img/ui/iconos/ajolote-icon.png" alt="Ajolote">
+                            </div>
+                            <div class="stat-info">
+                                <h4>Ajolote</h4>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 5%;"></div>
+                                </div>
+                                <p>Críticamente amenazado</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <img src="img/ui/iconos/guacamaya-icon.png" alt="Guacamaya Roja"> </div>
+                            <div class="stat-info">
+                                <h4>Guacamaya Roja</h4>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 15%;"></div> </div>
+                                <p>En peligro</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <img src="img/ui/iconos/jaguar-icon.png" alt="Jaguar"> </div>
+                            <div class="stat-info">
+                                <h4>Jaguar</h4>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 25%;"></div> </div>
+                                <p>Casi amenazado</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conservation-cta">
+                        <a href="conservacion.html" class="btn-magic">¿Cómo puedo ayudar?</a> </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo/logo-tatipilis.png" alt="Los Tatipilis">
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="personajes.html">Personajes</a></li>
+                        <li><a href="refranes.html">Refranes</a></li>
+                        <li><a href="lugares.html">Lugares</a></li>
+                        <li><a href="gastronomia.html">Gastronomía</a></li>
+                        <li><a href="oficios.html">Oficios</a></li>
+                        <li><a href="tradiciones.html">Tradiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><img src="img/ui/iconos/facebook.png" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="img/ui/iconos/instagram.png" alt="Instagram"></a>
+                    <a href="#" class="social-icon"><img src="img/ui/iconos/youtube.png" alt="YouTube"></a>
+                    <a href="#" class="social-icon"><img src="img/ui/iconos/tiktok.png" alt="TikTok"></a>
+                </div>
+                <div class="footer-contact">
+                    <p>Contacto: <a href="mailto:info@lostatipilis.com">info@lostatipilis.com</a></p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Los Tatipilis - Todos los derechos reservados</p>
+                </div>
+            </div>
+            <div class="footer-decoration">
+                <div class="footer-leaf leaf1"></div>
+                <div class="footer-leaf leaf2"></div>
+                <div class="footer-leaf leaf3"></div>
+            </div>
+        </footer>
+
+        <div id="particles-container"></div>
+
+        <audio id="ambient-sound" loop>
+            <source src="audio/ambiente-bosque.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src="js/lib/gsap.min.js"></script>
+    <script src="js/lib/scrollmagic.min.js"></script>
+    <script src="js/lib/lottie.min.js"></script>
+    <script src="js/lib/three.min.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/interactive.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/*
+   Los Tatipilis - Estilos Responsivos Adicionales
+   Archivo: responsive.css
+
+   Este archivo complementa style.css con ajustes más específicos
+   para diferentes tamaños de pantalla, si son necesarios.
+   Muchos de los estilos responsivos básicos ya se han integrado
+   en style.css mediante media queries.
+*/
+
+/* ===== AJUSTES PARA TABLETAS (Ejemplo: 769px - 1024px) ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Si el header es fijo y necesitas ajustar el padding del body */
+    /* body.fixed-header-padding {
+        padding-top: 70px !important;
+    } */
+
+    #main-nav ul {
+        gap: 1.2rem; /* Espacio entre troncos para tabletas */
+    }
+
+    .nav-tronco .tronco-img {
+        width: 65px;
+    }
+    .nav-tronco .menu-icon {
+        width: 42px;
+        height: 42px;
+    }
+    .nav-tronco span {
+        font-size: 1.25rem;
+    }
+
+    .welcome-content {
+        max-width: 600px;
+        padding: 2rem;
+    }
+
+    .animated-title {
+        font-size: 4.5rem;
+    }
+
+    .section-heading h2 {
+        font-size: 3.2rem;
+    }
+
+    .character-card {
+        gap: 1.5rem;
+    }
+    .character-image img {
+        max-height: 320px;
+    }
+    .character-info h3 {
+        font-size: 3.2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+    }
+
+    .conservation-content {
+        max-width: 800px;
+    }
+    .conservation-stats {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+
+/* ===== AJUSTES FINALES PARA MÓVILES PEQUEÑOS (Ejemplo: Menos de 360px) ===== */
+@media screen and (max-width: 359px) {
+    .logo {
+        width: 90px; /* Logo aún más pequeño */
+    }
+
+    .animated-title {
+        font-size: 2.8rem;
+    }
+    .welcome-text {
+        font-size: 1.4rem;
+    }
+    .btn-magic {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .section-heading h2 {
+        font-size: 2.2rem;
+    }
+    .title-frame {
+        width: 220px;
+    }
+
+    .nav-tronco span { /* En menú desplegable */
+        font-size: 1.3rem;
+    }
+    .nav-tronco .menu-icon {
+        width: 32px;
+        height: 32px;
+    }
+     .nav-tronco .tronco-img {
+        width: 45px;
+    }
+
+    .character-info h3 {
+        font-size: 2.2rem;
+    }
+    .character-quote {
+        font-size: 1.5rem;
+    }
+    .trait {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .category-card {
+        height: 220px;
+    }
+    .category-overlay h3 {
+        font-size: 1.6rem;
+    }
+     .category-overlay p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .btn-explore {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+    }
+    .footer-logo img {
+        width: 150px;
+    }
+    .footer-nav a {
+        font-size: 1.3rem;
+    }
+}
+
+/* Consideraciones adicionales para el menú hamburguesa si no está en style.css */
+/*
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    #main-nav {
+        display: none; // Oculto por defecto
+        position: absolute;
+        top: 100%; // Debajo del header
+        left: 0;
+        width: 100%;
+        background-color: #FFE6B3; // Fondo para el menú desplegado
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1900; // Asegurar que esté sobre otros elementos pero debajo del header si es fijo
+    }
+
+    #main-nav.active {
+        display: flex; // Mostrar cuando está activo
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-tronco {
+        margin: 0.5rem 0;
+        width: auto; // Ocupar el ancho necesario
+    }
+
+    .nav-tronco a {
+        padding: 0.8rem 1rem; // Padding para mejor toque
+    }
+    .nav-tronco span {
+        display: inline-block; // Asegurar que el span sea visible
+        margin-top: 0.5rem;
+    }
+}
+*/
+ 

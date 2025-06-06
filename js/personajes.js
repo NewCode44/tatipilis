@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Tatipilis - Personajes</title>
+    <link rel="icon" href="img/logo/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/personajes.css">
+</head>
+<body class="personajes-page">
+    <div id="preloader">
+        <div class="logo-container"> <div id="logo-animation"></div> <div class="progress-bar-container" style="display:none;"> <div class="progress-bar"></div>
+            </div>
+            <p class="loading-text">Cargando el mundo mágico...</p>
+        </div>
+    </div>
+
+    <audio id="background-music" loop> <source src="audio/melodia-principal.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <header> <div class="logo">
+            <a href="index.html">
+                <img src="img/logo/logo-tatipilis.png" alt="Los Tatipilis"> </a>
+        </div>
+        <nav id="main-nav"> <ul>
+                <li class="nav-tronco"> <a href="index.html">
+                        <img src="img/ui/iconos/menu/inicio-icon.png" alt="Icono Inicio" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-home.png" alt="Inicio" class="tronco-img">
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-tronco active">
+                    <a href="personajes.html">
+                        <img src="img/ui/iconos/menu/personajes-icon.png" alt="Icono Personajes" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-personajes.png" alt="Personajes" class="tronco-img">
+                        <span>Personajes</span>
+                    </a>
+                </li>
+                <li class="nav-tronco">
+                    <a href="refranes.html">
+                        <img src="img/ui/iconos/menu/refranes-icon.png" alt="Icono Refranes" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-refranes.png" alt="Refranes" class="tronco-img">
+                        <span>Refranes</span>
+                    </a>
+                </li>
+                <li class="nav-tronco">
+                    <a href="lugares.html">
+                        <img src="img/ui/iconos/menu/lugares-icon.png" alt="Icono Lugares" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-lugares.png" alt="Lugares" class="tronco-img">
+                        <span>Lugares</span>
+                    </a>
+                </li>
+                <li class="nav-tronco">
+                    <a href="gastronomia.html">
+                        <img src="img/ui/iconos/menu/gastronomia-icon.png" alt="Icono Gastronomía" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-gastronomia.png" alt="Gastronomía" class="tronco-img">
+                        <span>Gastronomía</span>
+                    </a>
+                </li>
+                <li class="nav-tronco">
+                    <a href="oficios.html">
+                        <img src="img/ui/iconos/menu/oficios-icon.png" alt="Icono Oficios" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-oficios.png" alt="Oficios" class="tronco-img">
+                        <span>Oficios</span>
+                    </a>
+                </li>
+                <li class="nav-tronco">
+                    <a href="tradiciones.html">
+                        <img src="img/ui/iconos/menu/tradiciones-icon.png" alt="Icono Tradiciones" class="menu-icon">
+                        <img src="img/ui/troncos/tronco-tradiciones.png" alt="Tradiciones" class="tronco-img">
+                        <span>Tradiciones</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="audio-toggle"> <img src="img/ui/iconos/audio-on.png" alt="Toggle Audio"> </div>
+        <div class="mobile-menu-toggle"> <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="hero-personajes parallax-container">
+        <div class="parallax-layer bg-far" data-speed="0.1"></div>
+        <div class="parallax-layer bg-mid" data-speed="0.3"></div>
+        <div class="parallax-layer bg-near" data-speed="0.5"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Conoce a los Tatipilis</h1>
+            <p class="hero-description">Descubre la magia y personalidad de cada uno de nuestros amigos del bosque. ¡Cada uno con habilidades únicas para proteger la naturaleza de México!</p>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Desliza para conocerlos</span>
+            <img src="img/ui/iconos/flecha-abajo.png" alt="Desliza hacia abajo" class="bounce">
+        </div>
+        <div class="particles-container" id="leaves-particles"></div> </section>
+
+    <section class="personajes-selector">
+        <div class="selector-container">
+            <h2 class="section-title">Nuestros Amigos del Bosque</h2>
+            <div class="personajes-icons">
+                <div class="personaje-icon active" data-target="axli">
+                    <img src="img/personajes/axli/axli-face.png" alt="Axli">
+                    <span>Axli</span>
+                </div>
+                <div class="personaje-icon" data-target="indajani">
+                    <img src="img/personajes/indajani/indajani-face.png" alt="Indajani">
+                    <span>Indajani</span>
+                </div>
+                <div class="personaje-icon" data-target="kauina">
+                    <img src="img/personajes/kauina/kauina-face.png" alt="Kauina">
+                    <span>Kauina</span>
+                </div>
+                <div class="personaje-icon" data-target="kuyki">
+                    <img src="img/personajes/kuyki/kuyki-face.png" alt="Kuyki">
+                    <span>Kuyki</span>
+                </div>
+                <div class="personaje-icon" data-target="ocelin">
+                    <img src="img/personajes/ocelin/ocelin-face.png" alt="Ocelín">
+                    <span>Ocelín</span>
+                </div>
+                <div class="personaje-icon" data-target="tlapu">
+                    <img src="img/personajes/tlapu/tlapu-face.png" alt="Tlapu">
+                    <span>Tlapu</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="personajes-detail">
+        <div class="personaje-detail-container active" id="axli-detail">
+            <div class="personaje-card">
+                <div class="personaje-visual">
+                    <div class="personaje-image-container">
+                        <img src="img/personajes/axli/axli-full.png" alt="Axli" class="personaje-full-img">
+                        <div class="magic-particles"></div> </div>
+                    <div class="personaje-animation" id="axli-animation" data-animation="img/personajes/axli/axli-animation.json"></div>
+                </div>
+                <div class="personaje-info">
+                    <div class="personaje-header">
+                        <h2 class="personaje-name">Axli</h2>
+                        <div class="personaje-species">(Ajolote mexicano)</div>
+                        <div class="conservation-status danger">En peligro crítico</div>
+                    </div>
+                    <div class="personaje-description">
+                        <p>Axli es un ajolote curioso y soñador que puede detectar la magia escondida en cada rincón del bosque Tatipili. A pesar de su timidez, siempre está dispuesto a explorar lugares nuevos en busca de aventuras mágicas.</p>
+
+                        <h3>Personalidad</h3>
+                        <ul class="trait-list">
+                            <li><span class="trait-icon curiosity"></span>Curioso</li>
+                            <li><span class="trait-icon dreamer"></span>Soñador</li>
+                            <li><span class="trait-icon shy"></span>Tímido</li>
+                            <li><span class="trait-icon magical"></span>Sensible a la magia</li>
+                        </ul>
+
+                        <h3>Super poder</h3>
+                        <p>Puede detectar cosas mágicas y energías especiales en la naturaleza, lo que le permite encontrar lugares sagrados y elementos con propiedades únicas.</p>
+
+                        <h3>Datos curiosos</h3>
+                        <div class="fun-facts">
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Los ajolotes son salamandras que conservan características larvarias en la edad adulta, como sus branquias externas.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Pueden regenerar extremidades, órganos y hasta partes de su cerebro y corazón.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Son endémicos de los canales de Xochimilco en la Ciudad de México.</p>
+                            </div>
+                        </div>
+
+                        <div class="conservation-info">
+                            <h3>¿Por qué está en peligro?</h3>
+                            <p>La población de ajolotes ha disminuido dramáticamente debido a la contaminación del agua, la urbanización de su hábitat natural y la introducción de especies invasoras que se alimentan de ellos.</p>
+
+                            <div class="help-actions">
+                                <h4>¿Cómo ayudar?</h4>
+                                <ul>
+                                    <li>Apoyar proyectos de limpieza en Xochimilco</li>
+                                    <li>Visitar responsablemente los canales</li>
+                                    <li>Difundir información sobre su importancia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-elements">
+                <button class="magic-button" id="axli-magic-button"> <span>¡Activa su poder mágico!</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="personaje-detail-container" id="indajani-detail">
+            <div class="personaje-card">
+                <div class="personaje-visual">
+                    <div class="personaje-image-container">
+                        <img src="img/personajes/indajani/indajani-full.png" alt="Indajani" class="personaje-full-img">
+                        <div class="friendship-particles"></div> </div>
+                    <div class="personaje-animation" id="indajani-animation" data-animation="img/personajes/indajani/indajani-animation.json"></div>
+                </div>
+                <div class="personaje-info">
+                    <div class="personaje-header">
+                        <h2 class="personaje-name">Indajani</h2>
+                        <div class="personaje-species">(Niña P'urhépecha)</div>
+                        </div>
+                    <div class="personaje-description">
+                        <p>Indajani es una niña energética y alegre que hace amigos con todos los seres del bosque. Su nombre significa "Luz" en p'urhépecha, y como su nombre lo indica, ilumina cada lugar que visita con su noble corazón.</p>
+
+                        <h3>Personalidad</h3>
+                        <ul class="trait-list">
+                            <li><span class="trait-icon friendly"></span>Amigable</li>
+                            <li><span class="trait-icon energetic"></span>Energética</li>
+                            <li><span class="trait-icon noble"></span>Noble</li>
+                            <li><span class="trait-icon joyful"></span>Alegre</li>
+                        </ul>
+
+                        <h3>Super poder</h3>
+                        <p>Puede hacer amigos de inmediato con cualquier ser viviente, incluso con las criaturas más tímidas o esquivas del bosque.</p>
+
+                        <h3>Cultura P'urhépecha</h3>
+                        <div class="cultural-facts">
+                            <div class="cultural-fact">
+                                <img src="img/ui/iconos/culture-icon.png" alt="Cultura">
+                                <p>Los P'urhépechas son un pueblo indígena que habita principalmente en el estado de Michoacán.</p>
+                            </div>
+                            <div class="cultural-fact">
+                                <img src="img/ui/iconos/culture-icon.png" alt="Cultura">
+                                <p>Tienen una rica tradición artesanal que incluye la cerámica, textiles y la madera tallada.</p>
+                            </div>
+                            <div class="cultural-fact">
+                                <img src="img/ui/iconos/culture-icon.png" alt="Cultura">
+                                <p>Celebran la Noche de Muertos de una forma única en el lago de Pátzcuaro con la ceremonia del "Fuego Nuevo".</p>
+                            </div>
+                        </div>
+
+                        <div class="cultural-mission">
+                            <h3>Su misión</h3>
+                            <p>Indajani busca conectar a las personas con la naturaleza y enseñarles sobre la importancia de proteger a las especies en peligro. Es la voz de los animales que no pueden hablar por sí mismos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-elements">
+                <button class="magic-button" id="indajani-magic-button">
+                    <span>¡Haz nuevos amigos!</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="personaje-detail-container" id="kauina-detail">
+            <div class="personaje-card">
+                <div class="personaje-visual">
+                    <div class="personaje-image-container">
+                        <img src="img/personajes/kauina/kauina-full.png" alt="Kauina" class="personaje-full-img">
+                        <div class="song-particles"></div>
+                    </div>
+                    <div class="personaje-animation" id="kauina-animation" data-animation="img/personajes/kauina/kauina-animation.json"></div>
+                </div>
+                <div class="personaje-info">
+                    <div class="personaje-header">
+                        <h2 class="personaje-name">Kauina</h2>
+                        <div class="personaje-species">(Guacamaya Roja)</div>
+                        <div class="conservation-status danger">En peligro</div>
+                    </div>
+                    <div class="personaje-description">
+                        <p>Kauina es una guacamaya extrovertida y valiente con plumaje de vibrantes colores. Es la cantante del bosque, cuya melodiosa voz puede ser escuchada desde grandes distancias.</p>
+
+                        <h3>Personalidad</h3>
+                        <ul class="trait-list">
+                            <li><span class="trait-icon extroverted"></span>Extrovertida</li>
+                            <li><span class="trait-icon brave"></span>Valiente</li>
+                            <li><span class="trait-icon flirty"></span>Coqueta</li>
+                            <li><span class="trait-icon musical"></span>Musical</li>
+                        </ul>
+
+                        <h3>Super poder</h3>
+                        <p>Puede cantar con una fuerza y belleza extraordinarias, creando melodías que inspiran a todos los habitantes del bosque.</p>
+
+                        <h3>Datos curiosos</h3>
+                        <div class="fun-facts">
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Las guacamayas rojas pueden vivir hasta 60 años en cautiverio.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Sus plumas brillantes le sirven para camuflarse entre las frutas rojas y amarillas de los árboles tropicales.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Su pico fuerte les permite romper nueces y semillas que otros animales no pueden abrir.</p>
+                            </div>
+                        </div>
+
+                        <div class="conservation-info">
+                            <h3>¿Por qué está en peligro?</h3>
+                            <p>La deforestación de las selvas tropicales ha reducido drásticamente su hábitat natural. Además, el tráfico ilegal para el comercio de mascotas ha diezmado sus poblaciones silvestres.</p>
+
+                            <div class="help-actions">
+                                <h4>¿Cómo ayudar?</h4>
+                                <ul>
+                                    <li>No adquirir aves silvestres como mascotas</li>
+                                    <li>Apoyar organizaciones de conservación</li>
+                                    <li>Promover el turismo responsable en sus hábitats</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-elements">
+                <button class="magic-button" id="kauina-magic-button">
+                    <span>¡Escucha su canto!</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="personaje-detail-container" id="kuyki-detail">
+            <div class="personaje-card">
+                <div class="personaje-visual">
+                    <div class="personaje-image-container">
+                        <img src="img/personajes/kuyki/kuyki-full.png" alt="Kuyki" class="personaje-full-img">
+                        <div class="sound-particles"></div>
+                    </div>
+                    <div class="personaje-animation" id="kuyki-animation" data-animation="img/personajes/kuyki/kuyki-animation.json"></div>
+                </div>
+                <div class="personaje-info">
+                    <div class="personaje-header">
+                        <h2 class="personaje-name">Kuyki</h2>
+                        <div class="personaje-species">(Tucán Real)</div>
+                        <div class="conservation-status warning">Vulnerable</div>
+                    </div>
+                    <div class="personaje-description">
+                        <p>Kuyki es un tucán ruidoso y energético que nunca para de moverse y hablar. Con su colorido pico y personalidad espontánea, trae alegría a todos los rincones del bosque Tatipili.</p>
+
+                        <h3>Personalidad</h3>
+                        <ul class="trait-list">
+                            <li><span class="trait-icon loud"></span>Ruidoso</li>
+                            <li><span class="trait-icon energetic"></span>Energético</li>
+                            <li><span class="trait-icon spontaneous"></span>Espontáneo</li>
+                            <li><span class="trait-icon mimic"></span>Imitador</li>
+                        </ul>
+
+                        <h3>Super poder</h3>
+                        <p>Puede imitar cualquier sonido a la perfección, desde el canto de otras aves hasta el sonido del viento o la lluvia.</p>
+
+                        <h3>Datos curiosos</h3>
+                        <div class="fun-facts">
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>A pesar de su tamaño, el pico de los tucanes es muy ligero, ya que está compuesto principalmente de keratin hueca.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Los tucanes utilizan su pico para regular su temperatura corporal.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Duermen con su pico metido bajo sus plumas y su cola doblada sobre su espalda.</p>
+                            </div>
+                        </div>
+
+                        <div class="conservation-info">
+                            <h3>¿Por qué está en situación vulnerable?</h3>
+                            <p>Los tucanes enfrentan la pérdida de hábitat debido a la deforestación, aunque algunas especies han mostrado capacidad de adaptación a hábitats modificados.</p>
+
+                            <div class="help-actions">
+                                <h4>¿Cómo ayudar?</h4>
+                                <ul>
+                                    <li>Apoyar esfuerzos de reforestación en selvas tropicales</li>
+                                    <li>Consumir productos amigables con los bosques</li>
+                                    <li>Fomentar el aviturismo responsable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-elements">
+                <button class="magic-button" id="kuyki-magic-button">
+                    <span>¡Escucha sus imitaciones!</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="personaje-detail-container" id="ocelin-detail">
+            <div class="personaje-card">
+                <div class="personaje-visual">
+                    <div class="personaje-image-container">
+                        <img src="img/personajes/ocelin/ocelin-full.png" alt="Ocelín" class="personaje-full-img">
+                        <div class="truth-particles"></div>
+                    </div>
+                    <div class="personaje-animation" id="ocelin-animation" data-animation="img/personajes/ocelin/ocelin-animation.json"></div>
+                </div>
+                <div class="personaje-info">
+                    <div class="personaje-header">
+                        <h2 class="personaje-name">Ocelín</h2>
+                        <div class="personaje-species">(Jaguar)</div>
+                        <div class="conservation-status danger">En peligro</div> </div>
+                    <div class="personaje-description">
+                        <p>Ocelín es un jaguar sereno y noble, guardián de las tradiciones ancestrales del bosque. Con su presencia imponente pero gentil, protege a todos los habitantes de Tatipili.</p>
+
+                        <h3>Personalidad</h3>
+                        <ul class="trait-list">
+                            <li><span class="trait-icon serene"></span>Sereno</li>
+                            <li><span class="trait-icon noble"></span>Noble</li>
+                            <li><span class="trait-icon strong"></span>Fuerte</li>
+                            <li><span class="trait-icon wise"></span>Sabio</li>
+                        </ul>
+
+                        <h3>Super poder</h3>
+                        <p>Puede oler la verdad y las intenciones de cualquier ser, lo que le permite ser un justo mediador en los conflictos del bosque.</p>
+
+                        <h3>Datos curiosos</h3>
+                        <div class="fun-facts">
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>El jaguar es el felino más grande de América y el tercero más grande del mundo.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Son excelentes nadadores y trepadores, adaptándose perfectamente a diversos entornos.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>En la mitología maya, el jaguar era considerado el dios de la oscuridad y el inframundo.</p>
+                            </div>
+                        </div>
+
+                        <div class="conservation-info">
+                            <h3>¿Por qué está en peligro?</h3>
+                            <p>La fragmentación de su hábitat, la caza furtiva y los conflictos con humanos por expansión agrícola y ganadera han reducido drásticamente su población.</p>
+
+                            <div class="help-actions">
+                                <h4>¿Cómo ayudar?</h4>
+                                <ul>
+                                    <li>Apoyar la creación de corredores biológicos</li>
+                                    <li>Fomentar prácticas ganaderas que coexistan con los jaguares</li>
+                                    <li>Respetar las áreas naturales protegidas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-elements">
+                <button class="magic-button" id="ocelin-magic-button">
+                    <span>¡Activa su olfato de verdad!</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="personaje-detail-container" id="tlapu-detail">
+            <div class="personaje-card">
+                <div class="personaje-visual">
+                    <div class="personaje-image-container">
+                        <img src="img/personajes/tlapu/tlapu-full.png" alt="Tlapu" class="personaje-full-img">
+                        <div class="chaos-particles"></div>
+                    </div>
+                    <div class="personaje-animation" id="tlapu-animation" data-animation="img/personajes/tlapu/tlapu-animation.json"></div>
+                </div>
+                <div class="personaje-info">
+                    <div class="personaje-header">
+                        <h2 class="personaje-name">Tlapu</h2>
+                        <div class="personaje-species">(Tlacuache)</div>
+                        <div class="conservation-status safe">Preocupación menor</div>
+                    </div>
+                    <div class="personaje-description">
+                        <p>Tlapu es un tlacuache travieso y ocurrente que siempre está planeando alguna broma. Aunque suele provocar pequeños desastres, su corazón es bueno y aprende de sus errores.</p>
+
+                        <h3>Personalidad</h3>
+                        <ul class="trait-list">
+                            <li><span class="trait-icon mischievous"></span>Travieso</li>
+                            <li><span class="trait-icon witty"></span>Ocurrente</li>
+                            <li><span class="trait-icon shy"></span>Vergonzoso</li> <li><span class="trait-icon chaotic"></span>Caótico</li>
+                        </ul>
+
+                        <h3>Super poder</h3>
+                        <p>Provoca pequeños desastres que, curiosamente, terminan ayudando a resolver problemas mayores de formas inesperadas.</p>
+
+                        <h3>Datos curiosos</h3>
+                        <div class="fun-facts">
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Los tlacuaches son los únicos marsupiales nativos de América del Norte.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>Son inmunes al veneno de serpientes y escorpiones, y raramente contraen rabia.</p>
+                            </div>
+                            <div class="fun-fact">
+                                <img src="img/ui/iconos/fact-icon.png" alt="Dato curioso">
+                                <p>En la mitología mexicana, el tlacuache fue quien robó el fuego para dárselo a los humanos.</p>
+                            </div>
+                        </div>
+
+                        <div class="ecological-info">
+                            <h3>Su importancia ecológica</h3>
+                            <p>Aunque el tlacuache no está en peligro, cumple funciones ecológicas importantes: dispersa semillas, controla plagas y ayuda a limpiar el ecosistema al consumir carroña.</p>
+
+                            <div class="did-you-know">
+                                <h4>¿Sabías que?</h4>
+                                <p>Los tlacuaches son excelentes adaptadores urbanos. Han logrado sobrevivir en ciudades modificando sus hábitos, lo que les ha permitido persistir mientras otras especies desaparecen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="interactive-elements">
+                <button class="magic-button" id="tlapu-magic-button"> <span>¡Activa su caos creativo!</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-personajes">
+        <h2 class="section-title">Galería de Aventuras</h2>
+        <div class="galeria-container">
+            <div class="galeria-item">
+                <img src="img/personajes/galeria/aventura-bosque.jpg" alt="Aventura en el bosque">
+                <div class="galeria-caption">Explorando el bosque Tatipili</div>
+            </div>
+            <div class="galeria-item">
+                <img src="img/personajes/galeria/rio-magico.jpg" alt="Río mágico">
+                <div class="galeria-caption">Descubriendo el río mágico</div>
+            </div>
+            <div class="galeria-item">
+                <img src="img/personajes/galeria/fiesta-animales.jpg" alt="Fiesta de animales">
+                <div class="galeria-caption">Gran celebración anual</div>
+            </div>
+            <div class="galeria-item">
+                <img src="img/personajes/galeria/rescate-bosque.jpg" alt="Rescate en el bosque">
+                <div class="galeria-caption">Misión de conservación</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conservacion-section">
+        <div class="conservacion-container">
+            <h2 class="section-title">Juntos por la Conservación</h2>
+            <p class="section-description">Los Tatipilis nos enseñan sobre la importancia de proteger a las especies en peligro de extinción en México. ¡Ayúdanos a difundir su mensaje!</p>
+
+            <div class="conservation-actions">
+                <div class="action-card">
+                    <img src="img/ui/iconos/aprende-icon.png" alt="Aprende" class="action-icon">
+                    <h3>Aprende</h3>
+                    <p>Conoce más sobre las especies en peligro y su importancia en el ecosistema mexicano.</p>
+                    <a href="conservacion.html" class="action-button">Más información</a> </div>
+                <div class="action-card">
+                    <img src="img/ui/iconos/comparte-icon.png" alt="Comparte" class="action-icon">
+                    <h3>Comparte</h3>
+                    <p>Difunde el mensaje de conservación con tus amigos y familia.</p>
+                    <div class="social-share">
+                        <a href="#" class="social-icon facebook" aria-label="Compartir en Facebook"></a>
+                        <a href="#" class="social-icon twitter" aria-label="Compartir en Twitter"></a>
+                        <a href="#" class="social-icon instagram" aria-label="Compartir en Instagram"></a>
+                    </div>
+                </div>
+                <div class="action-card">
+                    <img src="img/ui/iconos/actua-icon.png" alt="Actúa" class="action-icon">
+                    <h3>Actúa</h3>
+                    <p>Pequeñas acciones cotidianas pueden hacer una gran diferencia.</p>
+                    <a href="como-ayudar.html" class="action-button">¿Cómo ayudar?</a> </div>
+            </div>
+        </div>
+    </section>
+
+    <footer > <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo/logo-tatipilis.png" alt="Los Tatipilis"> </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="refranes.html">Refranes</a></li>
+                    <li><a href="lugares.html">Lugares</a></li>
+                    <li><a href="gastronomia.html">Gastronomía</a></li>
+                    <li><a href="oficios.html">Oficios</a></li>
+                    <li><a href="tradiciones.html">Tradiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon facebook" aria-label="Facebook Tatipilis"></a>
+                <a href="#" class="social-icon twitter" aria-label="Twitter Tatipilis"></a>
+                <a href="#" class="social-icon instagram" aria-label="Instagram Tatipilis"></a>
+                <a href="#" class="social-icon youtube" aria-label="YouTube Tatipilis"></a>
+            </div>
+            <div class="footer-info"> <p>&copy; 2025 Los Tatipilis - Todos los derechos reservados</p>
+                <p>Un proyecto para la conservación de la fauna mexicana</p>
+            </div>
+        </div>
+
+        <div class="footer-decoration">
+            <div class="footer-leaves"></div>
+            <div class="footer-grass"></div>
+        </div>
+    </footer>
+
+    <div class="decorative-elements"> <div class="floating-leaves"></div>
+        <div class="flying-butterflies"></div>
+    </div>
+
+    <script src="js/lib/gsap.min.js"></script>
+    <script src="js/lib/scrollmagic.min.js"></script>
+    <script src="js/lib/lottie.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/preloader.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/interactive.js"></script>
+    <script src="js/personajes.js"></script> </body>
+</html>
