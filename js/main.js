@@ -124,7 +124,7 @@ function initAudioPlayer() {
     window.fadeAudio = (direction) => {
         if (!ambientSound) return;
 
-        const fadePoint = direction === 'in' ? 0 : ambientSound.volume;
+
         const targetVolume = direction === 'in' ? 1 : 0;
         const fadeInterval = setInterval(() => {
             if (direction === 'in') {

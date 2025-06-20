@@ -863,3 +863,53 @@ function initIndexPageInteractions() {
         }
     }
 }
+/**
+ * Interacciones específicas para la página de personajes
+ */
+function initPersonajesPageInteractions() {
+    // Espacio reservado para futuras interacciones en la página de personajes
+}
+
+/**
+ * Interacciones específicas para la página de refranes
+ */
+function initRefranesPageInteractions() {
+    // Espacio reservado para futuras interacciones en la página de refranes
+}
+
+/**
+ * Interacciones específicas para la página de lugares
+ */
+function initLugaresPageInteractions() {
+    // Espacio reservado para futuras interacciones en la página de lugares
+}
+
+/**
+ * Interacciones específicas para la página de gastronomía
+ */
+function initGastronomiaPageInteractions() {
+    // Espacio reservado para futuras interacciones en la página de gastronomía
+}
+
+/**
+ * Interacciones específicas para la página de oficios
+ */
+function initOficiosPageInteractions() {
+    // Espacio reservado para futuras interacciones en la página de oficios
+}
+
+/**
+ * Interacciones específicas para la página de tradiciones
+ */
+function initTradicionesPageInteractions() {
+    // Espacio reservado para futuras interacciones en la página de tradiciones
+}
+
+/**
+ * Inicializa las interacciones del carrusel de personajes
+ */
+function initCharacterCarouselInteractions() {
+    if (typeof initCharacterCarousel === 'function') {
+        initCharacterCarousel();
+    }
+}
