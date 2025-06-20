@@ -265,6 +265,59 @@ header.solid {
     padding: 1rem 0;
 }
 
+/* ===== HERO DE GASTRONOMÍA (PARALLAX) ===== */
+#hero-gastronomia {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#hero-gastronomia #main-nav {
+    order: -1;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem 0;
+}
+
+#hero-gastronomia .parallax-layer.bg-far {
+    background-image: url('../img/ui/fondos/bosque-lejano.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-gastronomia .parallax-layer.bg-mid {
+    background-image: url('../img/ui/fondos/bosque-medio.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#hero-gastronomia .parallax-layer.bg-near {
+    background-image: url('../img/ui/fondos/bosque-cercano.png');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+/* ===== INTRO GASTRONOMÍA ===== */
+#intro-gastronomia {
+    padding-bottom: 2rem; /* Reduce espacio inferior */
+}
+
+#intro-gastronomia p {
+    font-size: 2.2rem; /* Texto más grande */
+}
+
+/* ===== SECCIÓN PLATILLOS ===== */
+#platillos {
+    padding-top: 2rem; /* Reduce espacio superior */
+}
+
 
 .welcome-content {
     text-align: center;
@@ -610,7 +663,7 @@ section {
 /* ===== SECCIÓN DE CATEGORÍAS ===== */
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Tamaño mínimo reducido */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas más estrechas */
     gap: 2.5rem; /* Espacio reducido */
 }
 
@@ -618,7 +671,7 @@ section {
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
-    height: 280px; /* Altura reducida */
+    height: 360px; /* Mayor altura para formato vertical */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transición más suave */
 }
@@ -637,7 +690,7 @@ section {
 .category-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    object-fit: contain; /* Muestra la imagen completa */
     transition: transform 0.5s ease;
 }
 
@@ -654,13 +707,13 @@ section {
     background: linear-gradient(to top, rgba(0,0,0,0.85), transparent); /* Gradiente más oscuro */
     color: #FFF;
     transition: background 0.5s ease, transform 0.5s ease;
-    transform: translateY(30%); /* Inicialmente un poco oculto */
-    opacity: 0.9;
+    transform: translateY(0); /* Texto visible por defecto */
+    opacity: 0.95;
 }
 
 .category-card:hover .category-overlay {
     background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.6));
-    transform: translateY(0); /* Se revela completamente */
+    transform: translateY(-5px); /* Ligero movimiento al pasar el cursor */
     opacity: 1;
 }
 
@@ -834,12 +887,18 @@ footer {
 
 .footer-nav a {
     color: #FFF;
-    font-size: 1.5rem; /* Tamaño reducido */
+    font-size: 1.6rem; /* Más visible */
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+    background: rgba(233,116,81,0.6);
+    border-radius: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .footer-nav a:hover {
-    color: #FFA500; /* Naranja al pasar el ratón */
-    text-decoration: underline;
+    background: #E97451;
+    transform: translateY(-3px) scale(1.05);
+    color: #FFF;
 }
 
 .footer-social {
@@ -1157,6 +1216,7 @@ footer {
     }
     .footer-nav a {
         font-size: 1.4rem;
+        padding: 0.3rem 0.8rem;
     }
     .social-icon {
         width: 40px;

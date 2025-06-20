@@ -12,7 +12,7 @@ const resourcesToPreload = {
     images: [
         'img/logo/logo-tatipilis.png',
         'img/logo/favicon.ico',
-        'img/ui/fondos/bosque-tatipili.png',
+        'img/ui/fondos/bosque-medio.png',
         'img/ui/troncos/tronco-home.png',
         'img/ui/troncos/tronco-personajes.png',
         'img/ui/troncos/tronco-refranes.png',

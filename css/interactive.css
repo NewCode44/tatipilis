@@ -1,1 +1,18 @@
- 
+ /*
+   Los Tatipilis - Estilos Interactivos
+   Archivo: interactive.css
+
+   Este archivo define reglas para los elementos que
+   reaccionan a las acciones del usuario, tales como
+   botones o tarjetas interactivas.
+*/
+
+/* Ejemplo de estilo para un botón interactivo */
+.interactive-button {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.interactive-button:hover {
+    transform: scale(1.05);
+}
