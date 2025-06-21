@@ -1,0 +1,124 @@
+[
+  {
+    "nombre": "Indajani",
+    "especie": "Niña zapoteca",
+    "significado_nombre": "En zapoteco, 'Indajani' significa 'agua que fluye'.",
+    "edad": 7,
+    "personalidad": [
+      "Alegre",
+      "Energética",
+      "Noble",
+      "Juguetona",
+      "Siempre dispuesta a ayudar"
+    ],
+    "superpoder": "Su energía positiva puede unir a todos, crear lazos de amistad y encontrar soluciones creativas a cualquier problema.",
+    "descripcion": "Indajani es una niña delgada, con un lazo rosa en el cabello, mirada brillante y sonrisa contagiosa. Su vestimenta es colorida y refleja la alegría de las tradiciones mexicanas.",
+    "estado_conservacion": "No aplica",
+    "datos_curiosos": [
+      "Le encanta aprender cosas nuevas, contar historias y tejer rebozos como su abuela.",
+      "Representa la unión entre las culturas indígenas y la naturaleza."
+    ],
+    "imagen": "indajani.png"
+  },
+  {
+    "nombre": "Axli",
+    "especie": "Ajolote mexicano (Ambystoma mexicanum)",
+    "significado_nombre": "Nombre inspirado en el náhuatl, relacionado con el agua y el movimiento.",
+    "edad": null,
+    "personalidad": [
+      "Curioso",
+      "Soñador",
+      "Sensible a la magia",
+      "Muy observador"
+    ],
+    "superpoder": "Puede detectar cosas mágicas y energías especiales en la naturaleza.",
+    "descripcion": "Ajolote rosado con branquias plumosas, siempre sonriente y de mirada brillante.",
+    "estado_conservacion": "En peligro crítico (UICN)",
+    "datos_curiosos": [
+      "Puede regenerar extremidades y órganos.",
+      "Vive en los canales de Xochimilco.",
+      "Es símbolo de resiliencia y esperanza ecológica."
+    ],
+    "imagen": "axli.png"
+  },
+  {
+    "nombre": "Ocelín",
+    "especie": "Jaguar bebé (Panthera onca)",
+    "significado_nombre": "Diminutivo cariñoso de ocelote, felino emblemático de América.",
+    "edad": null,
+    "personalidad": [
+      "Valiente",
+      "Protector",
+      "Noble",
+      "Un poco travieso"
+    ],
+    "superpoder": "Tiene una fuerza y agilidad fuera de lo común para su tamaño.",
+    "descripcion": "Cachorro de jaguar con manchas negras y ojos grandes, tierno pero con un rugido poderoso cuando es necesario.",
+    "estado_conservacion": "Casi amenazado (UICN)",
+    "datos_curiosos": [
+      "Representa el misticismo y poder de la selva mexicana.",
+      "Le gusta trepar árboles y cuidar a sus amigos."
+    ],
+    "imagen": "ocelin.png"
+  },
+  {
+    "nombre": "Kuyki",
+    "especie": "Tucán pico de quilla (Ramphastos sulfuratus)",
+    "significado_nombre": "Inspirado en palabras indígenas, relacionado con alegría y canto.",
+    "edad": null,
+    "personalidad": [
+      "Energético",
+      "Bromista",
+      "Creativo",
+      "Siempre tiene una idea nueva"
+    ],
+    "superpoder": "Su pico puede detectar cambios en el clima y predecir la llegada de lluvias o tormentas.",
+    "descripcion": "Tucán de plumaje negro, amarillo y verde, con un gran pico colorido. Siempre de buen humor y contagia alegría.",
+    "estado_conservacion": "Preocupación menor (UICN)",
+    "datos_curiosos": [
+      "Puede volar distancias cortas y es muy bueno saltando de rama en rama.",
+      "Es el primero en avisar cuando viene una tormenta."
+    ],
+    "imagen": "kuyki.png"
+  },
+  {
+    "nombre": "Kauina",
+    "especie": "Guacamaya roja (Ara macao)",
+    "significado_nombre": "Nombre sonoro y alegre inspirado en palabras indígenas.",
+    "edad": null,
+    "personalidad": [
+      "Elegante",
+      "Sabia",
+      "Artística",
+      "Muy solidaria"
+    ],
+    "superpoder": "Puede recordar rutas y tradiciones ancestrales, tiene una memoria prodigiosa.",
+    "descripcion": "Guacamaya de plumaje rojo intenso, con alas azules y amarillas, imponente y carismática.",
+    "estado_conservacion": "Preocupación menor, pero amenazada localmente por tráfico ilegal.",
+    "datos_curiosos": [
+      "Su canto es melodioso y puede imitar sonidos del entorno.",
+      "Le gusta contar historias antiguas y pintar con plumas de colores."
+    ],
+    "imagen": "kauina.png"
+  },
+  {
+    "nombre": "Tlapu",
+    "especie": "Tlacuache común (Didelphis virginiana)",
+    "significado_nombre": "De origen náhuatl, relacionado con el fuego y la astucia.",
+    "edad": null,
+    "personalidad": [
+      "Juguetón",
+      "Astuto",
+      "Travieso",
+      "Muy ingenioso"
+    ],
+    "superpoder": "Puede 'hacerse el muerto' para salir de situaciones peligrosas y encontrar comida donde nadie más puede.",
+    "descripcion": "Pequeño marsupial de pelaje gris, con nariz rosada y cola prensil.",
+    "estado_conservacion": "Preocupación menor (UICN)",
+    "datos_curiosos": [
+      "Es uno de los animales más antiguos de América.",
+      "Según la leyenda, trajo el fuego a la humanidad robándolo con su cola."
+    ],
+    "imagen": "tlapu.png"
+  }
+]
